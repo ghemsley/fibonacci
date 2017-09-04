@@ -29,7 +29,7 @@ def main():
     __parser.add_argument("-i", "--index", help="Fibonacci sequence index to find value of", type=int)
     __args = __parser.parse_args()
 
-    if __args.index or __args.index==0:
+    if __args.index is not None:
         print(str(fib(abs(int(__args.index)))))
     else:
         print("Fibonacci sequence result: " + str(fib(getInput())))
